@@ -6,7 +6,7 @@ const Script = bitcore.Script;
 //satoshis that are going to be sent:
 const satoshis = "amount_here_in_satoshi";
 
-//Testnet Keys. Sender address & privatekey:
+//Mainnet Keys. Sender address & privatekey:
 const address = "sender_mainnet_address_here";
 const privatekey = "sender_privatekey_here";
 //Recipient address:

@@ -12,7 +12,7 @@ const privatekey = "sender_privatekey_here";
 //Recipient address:
 const recipientAddress = "recipient_address_here";
 
-//Function to get current network fees (Testnet):
+//Function to get current network fees (Mainnet):
 async function fees() {
   try {
     let r = await axios.get('https://api.blockcypher.com/v1/btc/test3');
@@ -36,7 +36,7 @@ async function getUTXOs() {
     let fee = res.High_fee;
 
     //Get all Unspent Tx Outputs:
-    let url = `https://api.bitcore.io/api/BTC/testnet/address/${address}/?unspent=true`;
+    let url = `https://api.bitcore.io/api/BTC/mainnet/address/${address}/?unspent=true`;
     res = await axios.get(url);
     //console.log(res.data);
 

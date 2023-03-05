@@ -4,10 +4,10 @@ const axios = require('axios');
 const Script = bitcore.Script;
 
 //satoshis that are going to be sent:
-const satoshis = 52000;
+const satoshis = "amount_here_in_satoshi";
 
 //Testnet Keys. Sender address & privatekey:
-const address = "sender_tesnet_address_here";
+const address = "sender_mainnet_address_here";
 const privatekey = "sender_privatekey_here";
 //Recipient address:
 const recipientAddress = "recipient_address_here";

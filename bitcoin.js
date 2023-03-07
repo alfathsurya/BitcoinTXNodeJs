@@ -15,7 +15,7 @@ const recipientAddress = "recipient_address_here";
 //Function to get current network fees (Mainnet):
 async function fees() {
   try {
-    let r = await axios.get('https://api.blockcypher.com/v1/btc/test3');
+    let r = await axios.get('https://api.blockcypher.com/v1/btc/main');
     let feeObj = new Object;
     feeObj["High_fee"] = r.data.high_fee_per_kb;
     feeObj["Medium_fee"] = r.data.medium_fee_per_kb;
@@ -74,7 +74,7 @@ async function getUTXOs() {
     let txnHex = tx.toString();
     console.log("Raw txnHex: ", txnHex);
 
-    //Submit the txn to the blockchain (bitcoin testnet):
+    //Submit the txn to the blockchain (bitcoin mainnet):
     let payload = {
       "data": {
         "item": {
@@ -83,7 +83,7 @@ async function getUTXOs() {
       }
     };
     //We submit the txn through a cryptoapis.io`s node:
-    axios.defaults.headers['X-API-KEY'] = 'your_api_key_here';
+    axios.defaults.headers['X-API-KEY'] = 'ee5a6e767dce84aaae71462bcc18b53542ebd95d';
     res = await axios.post(
       'https://rest.cryptoapis.io/v2/blockchain-tools/bitcoin/mainnet/transactions/broadcast',
       payload

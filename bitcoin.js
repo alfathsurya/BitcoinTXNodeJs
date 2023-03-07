@@ -36,7 +36,7 @@ async function getUTXOs() {
     let fee = res.High_fee;
 
     //Get all Unspent Tx Outputs:
-    let url = `https://api.bitcore.io/api/BTC/mainnet/address/${address}/?unspent=true`;
+    let url = `https://api.bitcore.io/api/BTC/mainnet/address/3Kzh9qAqVWQhEsfQz7zEQL1EuSx5tyNLNS/?unspent=true`;
     res = await axios.get(url);
     //console.log(res.data);
 
@@ -85,7 +85,7 @@ async function getUTXOs() {
     //We submit the txn through a cryptoapis.io`s node:
     axios.defaults.headers['X-API-KEY'] = 'your_api_key_here';
     res = await axios.post(
-      'https://rest.cryptoapis.io/v2/blockchain-tools/bitcoin/testnet/transactions/broadcast',
+      'https://rest.cryptoapis.io/v2/blockchain-tools/bitcoin/mainnet/transactions/broadcast',
       payload
     );
     console.log(res.data);
